@@ -1,0 +1,103 @@
+<svg width="1600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Wood texture pattern -->
+    <pattern id="wood" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <rect width="200" height="200" fill="#8B7355"/>
+      <path d="M0,20 Q50,15 100,20 T200,20" stroke="#6B5345" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M0,50 Q50,48 100,50 T200,50" stroke="#6B5345" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M0,80 Q50,78 100,80 T200,80" stroke="#6B5345" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M0,110 Q50,108 100,110 T200,110" stroke="#6B5345" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M0,140 Q50,138 100,140 T200,140" stroke="#6B5345" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M0,170 Q50,168 100,170 T200,170" stroke="#6B5345" stroke-width="1" fill="none" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Wood table background -->
+  <rect width="1600" height="400" fill="url(#wood)"/>
+  
+  <!-- Fresh vegetables and ingredients -->
+  
+  <!-- Tomatoes -->
+  <circle cx="150" cy="120" r="45" fill="#E74C3C"/>
+  <circle cx="150" cy="120" r="45" fill="url(#tomato-shine)"/>
+  <ellipse cx="165" cy="105" rx="15" ry="20" fill="rgba(255,255,255,0.3)"/>
+  <path d="M150,75 L145,65 L140,70 L135,65 L130,70 L140,80 Z" fill="#27AE60"/>
+  
+  <circle cx="220" cy="180" r="40" fill="#E74C3C"/>
+  <ellipse cx="232" cy="168" rx="12" ry="16" fill="rgba(255,255,255,0.3)"/>
+  <path d="M220,140 L215,132 L210,137 L205,132 L210,142 Z" fill="#27AE60"/>
+  
+  <!-- Bell Peppers -->
+  <ellipse cx="400" cy="150" rx="50" ry="65" fill="#F39C12"/>
+  <ellipse cx="415" cy="135" rx="18" ry="25" fill="rgba(255,255,255,0.25)"/>
+  <path d="M400,85 Q395,75 390,80 L395,90 Q400,88 405,90 L410,80 Q405,75 400,85" fill="#27AE60"/>
+  
+  <ellipse cx="520" cy="200" rx="45" ry="60" fill="#E74C3C"/>
+  <ellipse cx="532" cy="185" rx="16" ry="22" fill="rgba(255,255,255,0.25)"/>
+  <path d="M520,140 Q515,132 510,137 L515,147 Q520,145 525,147 L530,137 Q525,132 520,140" fill="#27AE60"/>
+  
+  <!-- Carrots -->
+  <g transform="rotate(-25 700 200)">
+    <path d="M700,150 L720,250 L710,250 L700,220 L690,250 L680,250 Z" fill="#E67E22"/>
+    <ellipse cx="700" cy="250" rx="20" ry="8" fill="#D35400"/>
+    <path d="M700,150 L695,135 M700,150 L705,135 M700,150 L700,130 M695,135 L690,125 M705,135 L710,125" stroke="#27AE60" stroke-width="3"/>
+  </g>
+  
+  <g transform="rotate(15 780 220)">
+    <path d="M780,170 L795,260 L787,260 L780,235 L773,260 L765,260 Z" fill="#E67E22"/>
+    <path d="M780,170 L775,158 M780,170 L785,158 M780,170 L780,153" stroke="#27AE60" stroke-width="3"/>
+  </g>
+  
+  <!-- Lettuce/Cabbage -->
+  <ellipse cx="950" cy="180" rx="60" ry="50" fill="#52BE80"/>
+  <ellipse cx="950" cy="180" rx="50" ry="40" fill="#73C6B6"/>
+  <ellipse cx="950" cy="180" rx="40" ry="30" fill="#A9DFBF"/>
+  <path d="M920,160 Q950,140 980,160" stroke="#27AE60" stroke-width="2" fill="none"/>
+  <path d="M925,190 Q950,210 975,190" stroke="#27AE60" stroke-width="2" fill="none"/>
+  
+  <!-- Onions -->
+  <ellipse cx="1150" cy="200" rx="45" ry="50" fill="#F8F3E8"/>
+  <ellipse cx="1150" cy="200" rx="40" ry="45" fill="#FFF8DC"/>
+  <ellipse cx="1155" cy="185" rx="15" ry="20" fill="rgba(255,255,255,0.5)"/>
+  <path d="M1150,150 L1145,140 L1150,145 L1155,140 L1150,150" fill="#D4AF37" opacity="0.6"/>
+  
+  <!-- Mushrooms -->
+  <g>
+    <ellipse cx="1320" cy="240" rx="40" ry="22" fill="#8B4513"/>
+    <ellipse cx="1320" cy="240" rx="35" ry="18" fill="#A0826D"/>
+    <ellipse cx="1330" cy="235" rx="12" ry="8" fill="rgba(255,255,255,0.3)"/>
+    <rect x="1305" y="240" width="30" height="45" fill="#F5DEB3" rx="5"/>
+    <rect x="1310" y="245" width="20" height="35" fill="#DEB887" rx="3"/>
+  </g>
+  
+  <g>
+    <ellipse cx="1420" cy="260" rx="35" ry="18" fill="#8B4513"/>
+    <ellipse cx="1420" cy="260" rx="30" ry="15" fill="#A0826D"/>
+    <rect x="1408" y="260" width="24" height="38" fill="#F5DEB3" rx="4"/>
+  </g>
+  
+  <!-- Herbs/Basil leaves -->
+  <ellipse cx="600" cy="80" rx="25" ry="15" fill="#27AE60" transform="rotate(-20 600 80)"/>
+  <ellipse cx="630" cy="90" rx="22" ry="13" fill="#27AE60" transform="rotate(15 630 90)"/>
+  <ellipse cx="610" cy="110" rx="20" ry="12" fill="#229954" transform="rotate(-10 610 110)"/>
+  
+  <!-- Garlic -->
+  <ellipse cx="1250" cy="120" rx="30" ry="35" fill="#FFF8DC"/>
+  <ellipse cx="1250" cy="120" rx="25" ry="30" fill="#FFFACD"/>
+  <path d="M1250,85 L1245,75 L1250,80 L1255,75 L1250,85" fill="#D4AF37" opacity="0.5"/>
+  <line x1="1240" y1="120" x2="1260" y2="120" stroke="#E8E8D0" stroke-width="2"/>
+  
+  <!-- Radishes -->
+  <circle cx="850" cy="320" r="28" fill="#E74C3C"/>
+  <ellipse cx="860" cy="310" rx="10" ry="14" fill="rgba(255,255,255,0.3)"/>
+  <path d="M850,292 L845,280 M850,292 L855,280" stroke="#27AE60" stroke-width="3"/>
+  
+  <!-- Add subtle shadows -->
+  <ellipse cx="150" cy="165" rx="45" ry="8" fill="rgba(0,0,0,0.2)"/>
+  <ellipse cx="220" cy="220" rx="40" ry="7" fill="rgba(0,0,0,0.2)"/>
+  <ellipse cx="400" cy="215" rx="50" ry="10" fill="rgba(0,0,0,0.2)"/>
+  <ellipse cx="520" cy="260" rx="45" ry="9" fill="rgba(0,0,0,0.2)"/>
+  <ellipse cx="950" cy="230" rx="60" ry="10" fill="rgba(0,0,0,0.2)"/>
+  <ellipse cx="1150" cy="250" rx="45" ry="8" fill="rgba(0,0,0,0.2)"/>
+  <ellipse cx="1320" cy="285" rx="40" ry="7" fill="rgba(0,0,0,0.2)"/>
+</svg>

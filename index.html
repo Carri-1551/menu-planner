@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Menu Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2980b9">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Menu Planner">
+</head>
+<body>
+    <header>
+        <h1>Weekly Menu Planner</h1>
+    </header>
+
+    <main>
+        <section id="weekly-menu">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+                <h2 style="margin: 0;">This Week's Menu</h2>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-end;">
+                    <button id="roulette-btn" class="roulette-btn">🎲 Random Weekday Menu</button>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button id="weekend-btn" class="weekend-btn">🌴 Add Weekend</button>
+                        <button id="email-menu-btn" class="email-menu-btn">📧 Email Weekly Menu</button>
+                    </div>
+                </div>
+            </div>
+            <div id="menu-days" class="menu-grid"></div>
+        </section>
+
+        <section id="recipes">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h2 style="margin: 0;">Recipes</h2>
+                <button id="add-recipe-btn" class="add-recipe-btn">+ Add Recipe</button>
+            </div>
+            <div class="filter-buttons"></div>
+            <div id="recipe-list" class="recipe-grid"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Register service worker for PWA functionality
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js')
+                .then(reg => console.log('Service Worker registered'))
+                .catch(err => console.log('Service Worker registration failed'));
+        }
+    </script>
+</body>
+</html>
