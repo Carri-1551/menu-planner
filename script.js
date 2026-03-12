@@ -90,6 +90,38 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
+// localStorage: Save data
+function saveToLocalStorage() {
+    localStorage.setItem('menuPlanner_recipes', JSON.stringify(recipes));
+    localStorage.setItem('menuPlanner_weeklyMenu', JSON.stringify(weeklyMenu));
+    localStorage.setItem('menuPlanner_emailRecipients', JSON.stringify(emailRecipients));
+    localStorage.setItem('menuPlanner_nextId', nextId.toString());
+}
+
+// localStorage: Load data
+function loadFromLocalStorage() {
+    const savedRecipes = localStorage.getItem('menuPlanner_recipes');
+    const savedMenu = localStorage.getItem('menuPlanner_weeklyMenu');
+    const savedEmails = localStorage.getItem('menuPlanner_emailRecipients');
+    const savedNextId = localStorage.getItem('menuPlanner_nextId');
+    
+    if (savedRecipes) {
+        recipes = JSON.parse(savedRecipes);
+    }
+    
+    if (savedMenu) {
+        weeklyMenu = JSON.parse(savedMenu);
+    }
+    
+    if (savedEmails) {
+        emailRecipients = JSON.parse(savedEmails);
+    }
+    
+    if (savedNextId) {
+        nextId = parseInt(savedNextId);
+    }
+}
+
 function renderRecipes() {
     const recipeList = document.getElementById("recipe-list");
     let filtered = recipes;
@@ -140,6 +172,8 @@ function renderRecipes() {
         </div>
     `;
     }).join('');
+    
+    saveToLocalStorage();
 }
 
 function toggleEdit(recipeId) {
@@ -217,6 +251,8 @@ function renderMenu() {
             </div>
         `;
     }).join('');
+    
+    saveToLocalStorage();
 }
 
 function addToMenu(recipeId) {
@@ -425,16 +461,19 @@ function renderEmailList() {
 
 function updateEmailRecipient(index, value) {
     emailRecipients[index] = value;
+    saveToLocalStorage();
 }
 
 function addEmailRecipient() {
     emailRecipients.push("");
     renderEmailList();
+    saveToLocalStorage();
 }
 
 function removeEmailRecipient(index) {
     emailRecipients.splice(index, 1);
     renderEmailList();
+    saveToLocalStorage();
 }
 
 function closeEmailModal() {
@@ -519,6 +558,7 @@ function addNewRecipe() {
     
     updateFilterButtons();
     renderRecipes();
+    saveToLocalStorage();
 }
 
 function deleteRecipe(recipeId) {
@@ -527,6 +567,7 @@ function deleteRecipe(recipeId) {
     recipes = recipes.filter(r => r.id !== recipeId);
     updateFilterButtons();
     renderRecipes();
+    saveToLocalStorage();
 }
 
 function updateFilterButtons() {
@@ -618,6 +659,9 @@ document.getElementById('roulette-btn').addEventListener('click', rouletteMenu);
 document.getElementById('add-recipe-btn').addEventListener('click', addNewRecipe);
 document.getElementById('email-menu-btn').addEventListener('click', emailWeeklyMenu);
 document.getElementById('weekend-btn').addEventListener('click', addWeekend);
+
+// Load saved data on startup
+loadFromLocalStorage();
 
 updateFilterButtons();
 renderRecipes();
