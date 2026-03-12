@@ -1,40 +1,21 @@
-
 # Weekly Menu Planner
 
-A simple, elegant web app for planning weekly meals and generating shopping lists.
+A simple web app to plan your weekly meals and generate shopping lists.
+
+## Live App
+
+🔗 **[Open Menu Planner](https://carri-1551.github.io/menu-planner/)**
 
 ## Features
 
-- 🎲 Random weekly menu generator
-- 📧 Email shopping lists
-- 🍽️ Recipe management with categories
-- 🌱 Dietary filters (vegetarian/non-vegetarian)
-- 📱 Mobile-friendly Progressive Web App
-- 🔒 Works offline once installed
-
-## Live Demo
-
-Visit: [https://yourusername.github.io/menu-planner](https://yourusername.github.io/menu-planner)
-
-## Installation
-
-This is a Progressive Web App. You can install it:
-- **Mobile**: Open in browser → "Add to Home Screen"
-- **Desktop**: Open in browser → Click install icon in address bar
-
-## Technologies
-
-- HTML5, CSS3, JavaScript
-- Progressive Web App (PWA)
-- Service Worker for offline functionality
+- Manage recipes with categories and ingredients
+- Generate random weekday menus
+- Add weekend meals
+- Email weekly shopping lists
+- Filter recipes by category, ingredient, diet, season, and type
+- Progressive Web App - install on your phone or desktop
+- Data persists locally in your browser
 
 ## Usage
 
-1. Browse recipes or add your own
-2. Click "Random Weekday Menu" to generate a meal plan
-3. Customize individual days as needed
-4. Email your shopping list to family members
-
----
-
-Made with ❤️ for easier meal planning
+Visit the live app and start planning your meals!
