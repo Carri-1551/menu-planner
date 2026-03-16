@@ -20,19 +20,31 @@
     </header>
 
     <main>
-        <section id="weekly-menu">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
-                <h2 style="margin: 0;">This Week's Menu</h2>
-                <div style="display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-end;">
-                    <button id="roulette-btn" class="roulette-btn">🎲 Random Weekday Menu</button>
-                    <div style="display: flex; gap: 0.5rem;">
-                        <button id="weekend-btn" class="weekend-btn">🌴 Add Weekend</button>
-                        <button id="email-menu-btn" class="email-menu-btn">📧 Email Weekly Menu</button>
+        <div class="menu-container">
+            <section id="weekly-menu" class="menu-section">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+                    <h2 style="margin: 0;">This Week's Menu</h2>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-end;">
+                        <button id="roulette-btn" class="roulette-btn">🎯 Random Weekday Menu</button>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button id="weekend-btn" class="weekend-btn">☀️ Add Weekend</button>
+                            <button id="whatsapp-menu-btn" class="whatsapp-menu-btn">📲 Send via WhatsApp</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="menu-days" class="menu-grid"></div>
-        </section>
+                <div id="menu-days" class="menu-grid"></div>
+            </section>
+
+            <section id="dinner-selection" class="dinner-section">
+                <h2>Dinner Options</h2>
+                <p class="dinner-subtitle">Select 3-4 dinner recipes for the week</p>
+                <div id="dinner-list" class="dinner-list"></div>
+                
+                <h2 style="margin-top: 1.5rem;">Extras</h2>
+                <p class="dinner-subtitle">Snacks and light bites</p>
+                <div id="extras-list" class="dinner-list"></div>
+            </section>
+        </div>
 
         <section id="recipes">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
