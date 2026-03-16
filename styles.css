@@ -494,7 +494,12 @@ h2 {
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        padding: 0.5rem;
+    }
+    
+    header {
+        padding: 2rem 1rem;
     }
     
     .menu-container {
@@ -504,10 +509,12 @@ h2 {
     .dinner-section {
         position: static;
         max-height: none;
+        grid-column: 1;
     }
     
     .filter-buttons {
         grid-template-columns: 1fr;
+        padding: 1rem;
     }
     
     .recipe-grid {
@@ -515,16 +522,42 @@ h2 {
     }
     
     section {
-        padding: 1.5rem;
+        padding: 1rem;
     }
     
     .roulette-btn {
-        font-size: 1rem;
-        padding: 0.8rem 1.5rem;
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .weekend-btn,
+    .whatsapp-menu-btn {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .add-recipe-btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
     }
     
     main {
-        padding: 1rem 0.5rem;
+        padding: 0.5rem;
+        margin: 0.5rem auto;
+    }
+    
+    #weekly-menu > div:first-child {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 1rem;
+    }
+    
+    #weekly-menu > div:first-child > div {
+        align-items: stretch !important;
+    }
+    
+    #weekly-menu > div:first-child > div > div {
+        justify-content: space-between;
     }
 }
 
